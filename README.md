@@ -28,6 +28,9 @@
 2. Under **Include path**, add `${workspaceFolder}/src`.
 3. Under **Defines**, add ASSET_DIR pointing to your local assets folder. (for example: `ASSET_DIR="<path-to-project>/CatGame/assets/"`)
 
+### Gameplay Demo
+https://github.com/Tint-sabei/CatFeedingGame/blob/main/media/CatGame.mp4
+
 
 
 
