@@ -20,17 +20,13 @@
    - **Windows (Visual Studio Build Tools):** works with the automatic SFML download during CMake configure/build, nothing extra to install.
    - **macOS:** `xcode-select --install` and `brew install cmake`.
    - **Linux (Ubuntu):** `sudo apt install build-essential cmake git libx11-dev libxrandr-dev libudev-dev libgl1-mesa-dev libfreetype6-dev libopenal-dev libvorbis-dev libflac-dev`
-3. Open this project folder in VS Code. When CMake Tools prompts for a kit, pick your compiler (for MSYS2 UCRT64, choose the **UCRT64** GCC kit—for example, `GCC ... ucrt64`—rather than a 32-bit or non-UCRT kit).
-4. **Configure & Build:** Press **Build** on the bottom bar (or open the Command Palette with `Ctrl+Shift+P` / `Cmd+Shift+P` and run **CMake: Build**). If SFML is not installed on your system, the first build downloads and compiles it (a few minutes, needs internet).
-5. **Run:** Click **Run** (the play button) or run **CMake: Run Without Debugging** from the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`). If you do not see the run/build buttons, open the **CMake** view in the sidebar, expand **Project Outline** → **CatFeedingGame**, and right-click `CatFeedingGame (Executable)` to build or run/debug.
+3. Open this project folder in VS Code. When CMake Tools prompts for a kit, pick your compiler (for MSYS2 UCRT64, choose the **UCRT64** GCC kit rather than a 32-bit or non-UCRT kit).
+4. Click **CMake: Build** and **CMake: Run Without Debugging** from the Command Palette (`Ctrl+Shift+P`). 
 
-### Fixing VS Code IntelliSense (`ASSET_DIR` or header squiggles)
-Even when CMake builds the project fine, VS Code's C/C++ IntelliSense may show a red squiggle under `ASSET_DIR` or headers in `src/`:
-1. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **C/C++: Edit Configurations (UI)**.
-2. Set **Compiler path** to your C++ compiler (for MSYS2 UCRT64: `C:/msys64/ucrt64/bin/g++.exe`).
-3. Under **Include path**, add `${workspaceFolder}/src` (one path per line alongside `${default}`).
-4. Under **Defines**, add `ASSET_DIR` pointing to your local `assets/` folder—for example:
-   `ASSET_DIR="<path-to-project>/CatGame/assets/"`
+### Fixing VS Code IntelliSense 
+1. Set **Compiler path** to your C++ compiler (for MSYS2 UCRT64: `C:/msys64/ucrt64/bin/g++.exe`).
+2. Under **Include path**, add `${workspaceFolder}/src`.
+3. Under **Defines**, add ASSET_DIR pointing to your local assets folder. (for example: `ASSET_DIR="<path-to-project>/CatGame/assets/"`)
 
 
 
